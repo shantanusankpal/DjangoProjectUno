@@ -1,1 +1,15 @@
-freeze
+asgiref==3.8.1
+certifi==2025.4.26
+charset-normalizer==3.4.2
+Django==5.2.1
+django-stubs==5.2.0
+django-stubs-ext==5.2.0
+djangorestframework-stubs==3.16.0
+idna==3.10
+requests==2.32.3
+sqlparse==0.5.3
+tomli==2.2.1
+types-PyYAML==6.0.12.20250516
+types-requests==2.32.0.20250602
+typing_extensions==4.13.2
+urllib3==2.4.0
