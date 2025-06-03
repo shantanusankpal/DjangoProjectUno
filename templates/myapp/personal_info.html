@@ -1,6 +1,7 @@
 <html>
   {% load static %}
   <head>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Person Info</title>
   </head>
   <body>
@@ -10,7 +11,7 @@
       <li><strong>Salary:</strong> ₹{{ salary }}</li>
       <li><strong>Age:</strong> {{ age }}</li>
     </ul>
-    <img src="{% static 'images/hi.png' %}" alt="Hi image">
+    <img src="{% static 'images/hi.png' %}" alt="Hi image" class = "center-image">
   </body>
 </html>
 <!-- {%} -->
