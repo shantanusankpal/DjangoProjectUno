@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person Details</title>
+  <link rel="stylesheet" href="{% static 'css/person.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>Employee Details</h1>
+      {% if employee %}
+    <div class="card">
+        <p><strong>First Name:</strong> {{ employee.firstName }}</p>
+      <p><strong>Last Name:</strong> {{ employee.lastName }}</p>
+      <p><strong>Email:</strong> {{ employee.email }}</p>
+      <p><strong>Salary:</strong> ₹{{ employee.salary }}</p>
+    </div>
+      {% else %}
+      <h2>"NO Data"</h2>
+      {% endif %}
+  </div>
+</body>
+</html>
