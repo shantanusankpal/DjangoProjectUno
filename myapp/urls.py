@@ -6,5 +6,6 @@ urlpatterns = [
     path("time/", views.dateTimeView),
     path("hello/", views.display),
     path("employee/", views.employees),
+    path("userForm/", views.formsView),
     path("personalInfo/", views.personalInfo),
 ]

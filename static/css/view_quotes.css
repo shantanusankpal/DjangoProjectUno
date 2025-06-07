@@ -1,0 +1,68 @@
+body {
+    background-color: #f2f6fc;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.quote-list {
+    list-style: none;
+    padding: 0;
+}
+
+.quote-card {
+    background-color: #eaf2ff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #1976d2;
+}
+
+.quote-text {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #222;
+}
+
+.quote-meta {
+    font-size: 14px;
+    color: #555;
+}
+
+.no-quotes {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #145aa0;
+}
+

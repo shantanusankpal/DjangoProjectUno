@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 from myapp.models import Employee
+from myapp.forms import UserRegistrationForm
 
 
 def display(request):
@@ -20,6 +21,19 @@ def dateTimeView(request):
     dt = datetime.datetime.now()
     s = "<b>Thew current date time is :" + str(dt)
     return HttpResponse(s)
+
+
+def formsView(request):
+    form = UserRegistrationForm()
+    if request.method == "POST":
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            print("Form is valid")
+            print(f"First Name is {form.cleaned_data['firstName']}")
+            print(f"last Name is {form.cleaned_data['lastName']}")
+        else:
+            form = UserRegistrationForm()
+    return render(request, "myapp/formsForUser.html", {"form": form})
 
 
 def personalInfo(request):

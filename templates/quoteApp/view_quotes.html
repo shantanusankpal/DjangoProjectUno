@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Quotes</title>
+    <link rel="stylesheet" href="{% static 'css/view_quotes.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>📜 All Quotes</h1>
+
+        {% if quotes %}
+            <ul class="quote-list">
+                {% for quote in quotes %}
+                    <li class="quote-card">
+                        <p class="quote-text">“{{ quote.quote }}”</p>
+                        <p class="quote-meta">— {{ quote.written_by }}, Value: {{ quote.value }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="no-quotes">No quotes available.</p>
+        {% endif %}
+
+        <a href="{% url 'home' %}" class="back-button">🏠 Back to Home</a>
+    </div>
+</body>
+</html>
+

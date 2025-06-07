@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote App</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="home-container">
+        <h1>Welcome to the Quote App</h1>
+        <div class="links">
+            <a href="{% url 'add_quote' %}" class="button">➕ Add Quote</a>
+            <a href="{% url 'view_quotes' %}" class="button">📋 View All Quotes</a>
+        </div>
+    </div>
+</body>
+</html>
+

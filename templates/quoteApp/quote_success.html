@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote Submitted</title>
+    <link rel="stylesheet" href="{% static 'css/success.css' %}">
+</head>
+<body>
+    <div class="success-container">
+        <h1>✅ Quote Submitted Successfully!</h1>
+        <p>Thank you for sharing your quote. 🙌</p>
+        <a href="{% url 'add_quote' %}" class="back-link">Add Another Quote</a>
+        <a href="{% url 'home' %}" class="back-link">Home</a>
+        <a href="{% url 'view_quotes' %}" class="back-link">View Quotes</a>
+    </div>
+</body>
+</html>
+
