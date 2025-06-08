@@ -11,14 +11,20 @@
         <h1>📜 All Quotes</h1>
 
         {% if quotes %}
+        <form method="POST" action="{% url 'delete_quote' %}">
+            {% csrf_token %}
             <ul class="quote-list">
                 {% for quote in quotes %}
                     <li class="quote-card">
+                        <input type="checkbox" name="quote_ids" value="{{ quote.id }}">
                         <p class="quote-text">“{{ quote.quote }}”</p>
                         <p class="quote-meta">— {{ quote.written_by }}, Value: {{ quote.value }}</p>
+                        <a href="{% url 'update_quote' quote.id %}" class="update-button">✏️ Update</a>
                     </li>
                 {% endfor %}
             </ul>
+            <button type="submit" class="delete-button">🗑️ Delete Selected</button>
+        </form>
         {% else %}
             <p class="no-quotes">No quotes available.</p>
         {% endif %}
@@ -27,4 +33,5 @@
     </div>
 </body>
 </html>
+
 

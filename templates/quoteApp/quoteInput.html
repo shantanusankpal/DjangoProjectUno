@@ -1,19 +1,22 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>User Quote Submission</title>
+    <title>{% if form.instance.pk %}Update{% else %}Add{% endif %} Quote</title>
     <link rel="stylesheet" href="{% static 'css/quote_form.css' %}">
 </head>
 <body>
-    <div class="form-container">
-        <h1>Submit a New Quote</h1>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+    <h1>{% if form.instance.pk %}Update{% else %}Add{% endif %} Quote</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">
+            {% if form.instance.pk %}Update{% else %}Submit{% endif %}
+        </button>
+    </form>
+
+    <a href="{% url 'view_quotes' %}">🔙 Back to Quotes</a>
 </body>
 </html>
+
